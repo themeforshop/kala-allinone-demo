@@ -103,7 +103,7 @@ function countHome() {
     var countDown = function($this, first, number, suffix){
         if(first <= number ){
             $this.html(first.toLocaleString());
-            setTimeout (function() { countDown($this, first+suffix, number, suffix); }, 100);
+            setTimeout (function() { countDown($this, first+suffix, number, suffix); }, 300);
         } else {
             return false;
         }
