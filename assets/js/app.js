@@ -95,15 +95,16 @@ function countHome() {
                     $(this).addClass('active-count');
                     var number = $(this).data('item-number');
                     var suffix = $(this).data('item-suffix');
-                    countDown($(this), 0, number, suffix);
+                    var timer = $(this).data('item-timer');
+                    countDown($(this), 0, number, suffix, timer);
                 }
             });
         }
     }
-    var countDown = function($this, first, number, suffix){
+    var countDown = function($this, first, number, suffix, timer){
         if(first <= number ){
             $this.html(first.toLocaleString());
-            setTimeout (function() { countDown($this, first+suffix, number, suffix); }, 300);
+            setTimeout (function() { countDown($this, first+suffix, number, suffix, timer); }, timer);
         } else {
             return false;
         }
