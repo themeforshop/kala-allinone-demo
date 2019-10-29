@@ -637,12 +637,13 @@ body{ overflow-x: hidden; }
 	background-size: cover;
 	display: flex;
     flex-wrap: wrap;
-    align-items: center;
+	align-items: center;
+	height: 100vh;
 }
 .bestUXTheme-layout .bestUXTheme-inner{
 	width: calc(100% - 1061px);
 	max-width: 570px;
-	padding-left: 100px;
+	padding-left: 70px;
 	padding-top: 90px;
 	padding-bottom: 55px;
 	color: #fff;
@@ -740,25 +741,38 @@ body{ overflow-x: hidden; }
 	background: linear-gradient(to right, rgb(173, 120, 208), rgb(214, 45, 98));
 	border: 2px solid rgb(214, 45, 98);
 }
-
+.bestUXTheme-layout  .group-image{
+	background-image: url("../img/KaLa_AllinOne_Intropage.png");
+	background-size: cover;
+	background-position: right center;
+	flex: 1;
+	width: calc(100% - 570px);
+	display: block;
+    height: 100%;
+}
 @media screen and (min-width: 1261px){
     .bestUXTheme-layout{
         height: 100vh;
-	}	
-    .bestUXTheme-layout > .logo-image{
-        height: 100%; 
-    }
+	}	  
 }
-@media screen and (max-width: 1260px){
+@media screen and (max-width: 1260px){	
 	.bestUXTheme-layout .bestUXTheme-inner .caption-content{
 		font-size: 14px;
 	}	
 }
 @media screen and (max-width: 800px){
-	.bestUXTheme-layout .bestUXTheme-inner{
-		padding-top: 0px;
+	.bestUXTheme-layout{		
+		flex-direction: column;
+	}
+	.bestUXTheme-layout .group-image{ 
+		height: 50vh;
+		width: 100% !important;
+	}
+	.bestUXTheme-layout .bestUXTheme-inner{		
 		padding-left: 15px;
 		padding-right: 15px;
+		padding-top: 60px;
+		padding-bottom: 0;
 	}
 	.bestUXTheme-layout .bestUXTheme-inner .caption-content{
 		font-size: 16px;
@@ -1121,8 +1135,7 @@ body{ overflow-x: hidden; }
 		width: 50%;
 	}	
 	.bestUXTheme-layout .bestUXTheme-inner{
-		width: 50%;	
-		width: 45%;
+		width: 50%;			
 		padding-left: 15px;
 		padding-right: 15px;
 	}
@@ -1371,9 +1384,9 @@ body{ overflow-x: hidden; }
 }
 .sliderTheme-layout .sliderTheme-footer img,
 .sliderTheme-layout .sliderTheme-main .sliderTheme-main-inner img,
-.sliderTheme-layout .sliderTheme-header img{
-	height: 100%;
+.sliderTheme-layout .sliderTheme-header img{	
 	width: auto !important;
+	max-width: inherit;
 }
 .sliderTheme-layout .sliderTheme-main{
 	position: relative;
@@ -1436,7 +1449,64 @@ body{ overflow-x: hidden; }
 }
 /*End option1*/
 /*scroll to top*/
-
+.animated{
+	-webkit-animation-duration:1s;
+	animation-duration:1s;
+	-webkit-animation-fill-mode:both;
+	animation-fill-mode:both
+}
+@-webkit-keyframes fadeInRight{
+	from{
+		opacity:0;
+		-webkit-transform:translateX(200px);
+		transform:translateX(200px)
+	}
+	to{
+		opacity:1;
+		-webkit-transform:translateX(0);
+		transform:translateX(0)
+	}
+}
+@keyframes fadeInRight{
+	from{
+		opacity:0;
+		-webkit-transform:translateX(200px);
+		-ms-transform:translateX(200px);
+		transform:translateX(200px)
+	}
+	to{
+		opacity:1;
+		-webkit-transform:translateX(0);
+		-ms-transform:translateX(0);
+		transform:translateX(0)
+	}
+}
+@-webkit-keyframes fadeInLeft{
+	from{
+		opacity:0;
+		-webkit-transform:translateX(-200px);
+		transform:translateX(-200px)
+	}
+	to{
+		opacity:1;
+		-webkit-transform:translateX(0);
+		transform:translateX(0)
+	}
+}
+@keyframes fadeInLeft{
+	from{
+		opacity:0;
+		-webkit-transform:translateX(-200px);
+		-ms-transform:translateX(-200px);
+		transform:translateX(-200px)
+	}
+	to{
+		opacity:1;
+		-webkit-transform:translateX(0);
+		-ms-transform:translateX(0);
+		transform:translateX(0)
+	}
+}
 /*End scroll to top*/
 .heart {
 	animation: beat .5s infinite alternate;
@@ -1474,6 +1544,13 @@ body{ overflow-x: hidden; }
 }
 .float-right-icon #scroll-to-top:hover {
     cursor: pointer;
+}
+.float-right-icon #scroll-to-top.on {
+	animation: fadeInRight .6s ease both; 
+}
+.float-right-icon #scroll-to-top.off {
+	margin-right: -100px;	
+	animation: fadeInLeft .6s ease both; 
 }
 /* Heart beat animation */
 @keyframes beat{
