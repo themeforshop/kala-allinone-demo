@@ -851,7 +851,7 @@ body{ overflow-x: hidden; }
 }
 
 /* Mobile */
-@media screen and (min-width: 801px){
+@media screen and (min-width: 1261px){
 	.featuresTheme-layout .featuresTheme-title{
 		width: 55%;
 	}
