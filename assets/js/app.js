@@ -145,6 +145,7 @@ function sliderTheme(){
             lazyLoad: 'ondemand',
             pauseOnHover: false,
             autoplay: true,
+            speed: 1000,
             autoplaySpeed: time,
             prevArrow: '<button class="slick-prev"><img src="assets/icon/icon-left.svg" alt="Previous"></button>',
             nextArrow: '<button class="slick-next"><img src="assets/icon/icon-right.svg" alt="Next"></button>',
