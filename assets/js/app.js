@@ -64,19 +64,20 @@ function countInfo() {
                     $(this).addClass('active-count');
                     var number = $(this).find('[data-number]').data('number');
                     var suffix = $(this).data('info');
-                    countDown($(this).find('[data-number]'), 0, number, suffix);
+                    var timer = $(this).data('item-timer');
+                    countDown($(this).find('[data-number]'), 0, number, suffix, timer);
                 }
             });
         }
     }
-    var countDown = function($this, first, number, suffix){
+    var countDown = function($this, first, number, suffix, timer){
         if(first <= number ){
             if (number == 10) {
                 $this.html(first.toLocaleString());
             } else {
                 $this.html(first.toLocaleString()+'+');
             }
-            setTimeout (function() { countDown($this, first+suffix, number, suffix); }, 3);
+            setTimeout (function() { countDown($this, first+suffix, number, suffix, timer); }, timer);
         } else {
             return false;
         }
@@ -156,6 +157,37 @@ function sliderTheme(){
     });
 }
 
+function handleScrollTop() {
+    var toTop = function(a){
+        var b = $('[data-scroll-to-top]');
+        if (a == "on") {
+            b.addClass("on fadeInRight ").removeClass("off fadeOutRight"); 
+        } else {
+            b.addClass("off fadeOutRight animated").removeClass("on fadeInRight"); 
+        }
+    }
+    $(window).on('scroll', function() {
+        var b = $(this).scrollTop();
+        var c = $(this).height();
+        if (b > 0) { 
+            var d = b + c / 2;
+        } 
+        else { 
+            var d = 1 ;
+        }    
+        if (d < 1e3 && d < c) { 
+            toTop("off");
+        }
+        else {
+            toTop("on"); 
+        }
+    });  
+    $('[data-scroll-to-top]').on( 'click', function(e)  {
+        e.preventDefault();
+        $('body,html').animate({scrollTop:0},800,'swing');
+    });
+}
+
 $(document).on('ready', function() {
     $.support.touch = 'ontouchend' in document;
 
@@ -191,6 +223,8 @@ $(document).on('ready', function() {
     animateClick();
     
     sliderTheme();
+
+    handleScrollTop();
 });
 
 $(window).on('scroll', function() {
