@@ -922,6 +922,7 @@ body{ overflow-x: hidden; }
 	.bestUXTheme-layout .bestUXTheme-inner{
 		width: 100%;	
 		text-align: center;
+		max-width: 100%;	
 	}
 	.bestUXTheme-layout .bestUXTheme-inner .logo-content{
 		max-width: 100%;
