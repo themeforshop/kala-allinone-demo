@@ -637,12 +637,22 @@ body{ overflow-x: hidden; }
 	background-size: cover;
 	display: flex;
     flex-wrap: wrap;
-	align-items: center;
-	height: 100vh;
+	align-items: center;	
+}
+@media screen and (min-width: 801px){
+	.bestUXTheme-layout .group-image,
+	.bestUXTheme-layout{
+		min-height: 510px;		
+	}
+}
+@media screen and (min-width: 1025px){
+	.bestUXTheme-layout{
+		height: 100vh;
+	}	
 }
 .bestUXTheme-layout .bestUXTheme-inner{
-	width: calc(100% - 1061px);
-	max-width: 570px;
+	width: 570px;
+	max-width: 48%;
 	padding-left: 70px;
 	padding-top: 90px;
 	padding-bottom: 55px;
@@ -747,8 +757,8 @@ body{ overflow-x: hidden; }
 	background-size: cover;
 	background-position: right center;	
 	background-repeat: no-repeat;
-	max-width: calc(100% - 570px);
-	width: 62%;
+	max-width: 62%;
+	width: calc(100% - 570px);
 	display: block;
     height: 100%;
 }
@@ -1134,6 +1144,7 @@ body{ overflow-x: hidden; }
 	.bestUXTheme-layout > img{
 		width: 50%;
 	}	
+	.bestUXTheme-layout .group-image,
 	.bestUXTheme-layout .bestUXTheme-inner{
 		width: 50%;			
 		padding-left: 15px;
