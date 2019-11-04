@@ -1350,102 +1350,12 @@ body{ overflow-x: hidden; }
 
 /*option1*/
 .sliderTheme-layout{
-	margin: 60px 0 0 0;
-	height: calc(100vh - 60px);
+	margin: 30px auto 0;	
 }
-.sliderTheme-layout .sliderTheme-content{ 
-	height: 100%;
-	overflow: hidden;
+.sliderTheme-layout .sliderTheme-content{ 		
+	text-align: center;
 }
-.sliderTheme-layout .sliderTheme-content .sliderTheme-header{
-	height: 15%;
-	overflow: hidden;
-}
-.sliderTheme-layout .sliderTheme-footer{
-	height: 20%;
-}
-.sliderTheme-layout .sliderTheme-main{
-	height: 65%;
-	overflow: hidden;
-}
-.sliderTheme-layout .sliderTheme-main .sliderTheme-main-inner{
-	height: 100%;
-}
-.sliderTheme-layout .sliderTheme-footer,
-.sliderTheme-layout .sliderTheme-main .sliderTheme-main-inner,
-.sliderTheme-layout .sliderTheme-header{
-	width: 1300px;
-	padding-left: 40px;
-	padding-right: 40px;
-	max-width: 100%;
-	margin: 10px auto;
-	position: relative;
-}
-.sliderTheme-layout .sliderTheme-footer img,
-.sliderTheme-layout .sliderTheme-main .sliderTheme-main-inner img,
-.sliderTheme-layout .sliderTheme-header img{	
-	width: auto !important;
-	max-width: inherit;
-}
-.sliderTheme-layout .sliderTheme-main{
-	position: relative;
-}
-.sliderTheme-layout .sliderTheme-main .sliderTheme-main-text{
-	position: absolute;
-	left: 50%;
-	top: 50%;
-	transform: translate(-50%, -50%);
-	background-color: rgba(0,0,0,0.5);
-	color: #fff;
-	padding: 5px 15px;
-	margin: 0;
-	font-style: 16px;	
-    white-space: nowrap;
-}
-.sliderTheme-layout .slick-arrow{
-	background-color: transparent;
-	width: 40px; 
-	height: 40px;
-	line-height: 40px; 
-	text-align: center;		
-	box-shadow: none;
-    border: none;	
-}
-.sliderTheme-layout .slick-arrow,
-.sliderTheme-layout .slick-arrow img{
-	position: absolute;	
-	top: 50%;
-	transform: translateY(-50%);
-}
-.sliderTheme-layout .slick-arrow img{
-	height: auto !important;
-}
-.sliderTheme-layout .slick-arrow.slick-prev img, 
-.sliderTheme-layout .slick-arrow.slick-prev {	
-	left: 0;
-	right: auto;
-}
-.sliderTheme-layout .slick-arrow.slick-next img,
-.sliderTheme-layout .slick-arrow.slick-next {	
-	right: 0;
-	left: auto;
-}
-@media screen and (max-width: 550px){
-	.sliderTheme-layout .sliderTheme-main .sliderTheme-main-text{
-		font-size: 12px;
-	}	
-	.sliderTheme-layout .slick-arrow img{
-		width: 15px;
-	}
-}
-@media screen and (max-width: 1440px){
-	.sliderTheme-layout .slick-arrow.slick-next img,
-	.sliderTheme-layout .slick-arrow.slick-prev img{
-		left: 50%;
-		right: auto;
-		transform: translate(-50%,-50%);
-	}
-}
+
 /*End option1*/
 /*scroll to top*/
 .animated{
