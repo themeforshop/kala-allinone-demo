@@ -72,7 +72,7 @@ function countInfo() {
     }
     var countDown = function($this, first, number, suffix, timer){
         if(first <= number ){
-            if (number == 10) {
+            if (number == 5) {
                 $this.html(first.toLocaleString());
             } else {
                 $this.html(first.toLocaleString()+'+');
