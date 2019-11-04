@@ -647,6 +647,7 @@ body{ overflow-x: hidden; }
 	padding-top: 90px;
 	padding-bottom: 55px;
 	color: #fff;
+	flex: 1;
 }
 .bestUXTheme-layout .bestUXTheme-inner .logo-content{
 	display: flex;
@@ -741,12 +742,12 @@ body{ overflow-x: hidden; }
 	background: linear-gradient(to right, rgb(173, 120, 208), rgb(214, 45, 98));
 	border: 2px solid rgb(214, 45, 98);
 }
-.bestUXTheme-layout  .group-image{
+.bestUXTheme-layout .group-image{
 	background-image: url("../img/KaLa_AllinOne_Intropage.png");
 	background-size: cover;
-	background-position: right center;
-	flex: 1;
-	width: calc(100% - 570px);
+	background-position: right center;	
+	max-width: calc(100% - 570px);
+	width: 62%;
 	display: block;
     height: 100%;
 }
@@ -760,13 +761,11 @@ body{ overflow-x: hidden; }
 		font-size: 14px;
 	}	
 }
-@media screen and (max-width: 800px){
-	.bestUXTheme-layout{		
-		flex-direction: column;
-	}
+@media screen and (max-width: 800px){	
 	.bestUXTheme-layout .group-image{ 
 		height: 50vh;
 		width: 100% !important;
+		max-width: 100% !important;
 	}
 	.bestUXTheme-layout .bestUXTheme-inner{		
 		padding-left: 15px;
