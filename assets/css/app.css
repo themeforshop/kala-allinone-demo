@@ -744,8 +744,9 @@ body{ overflow-x: hidden; }
 }
 .bestUXTheme-layout .group-image{
 	background-image: url("../img/KaLa_AllinOne_Intropage.png");
-	background-size: 100%;
+	background-size: cover;
 	background-position: right center;	
+	background-repeat: no-repeat;
 	max-width: calc(100% - 570px);
 	width: 62%;
 	display: block;
