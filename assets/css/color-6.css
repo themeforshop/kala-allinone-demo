@@ -5,6 +5,7 @@
 .group-button-custom .product-wishlist:hover span,
 .desktop-header-account a:hover,
 .scroll-to-top:hover .button-to-top-text,
+.settings-bar-layout .settings-bar-item.bar-settings .settings-bar-settings-content .settings-bar-settings-item li.active a,
 .scroll-to-top:hover .button-to-top-text em{
   color: #ed2114 !important;
 }
