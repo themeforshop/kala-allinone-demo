@@ -6,8 +6,8 @@ Only 1 package, but include:
 
 * 4 Footer layout
 
-* 120 Sections
+* 140 Sections
 
-* 70+ preset Home page
+* 85+ preset Home page
 
-* 5 Product page layout
+* 6 Product page layout
