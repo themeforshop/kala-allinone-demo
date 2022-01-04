@@ -75,7 +75,7 @@ function countInfo() {
             if (number == 5) {
                 $this.html(first.toLocaleString());
             } else {
-                $this.html(first.toLocaleString()+'+');
+                $this.html(first.toLocaleString()+'');
             }
             setTimeout (function() { countDown($this, first+suffix, number, suffix, timer); }, timer);
         } else {
